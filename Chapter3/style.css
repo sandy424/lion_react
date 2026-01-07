@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 header {
     display: flex;
     align-items: center;
@@ -96,4 +97,104 @@ footer {
     padding: 20px;
     border: 2px solid lightgray;
     border-radius: 8px;
+=======
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+}
+
+header h2 {
+    color: darkred;
+    font-weight: 450;
+}
+
+input {
+    width: 300px;
+    padding: 10px 0;
+    padding-left: 40px;
+    left: 50%;
+    font-size: 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(245, 245, 245);
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.category {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid lightgray;
+}
+
+.category-list {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.products h3 {
+    padding-left: 400px;
+}
+
+.product-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.product-img {
+    width: 230;
+    height: 230px;
+}
+.product-brand {
+    margin-top: 5px;
+    margin-left: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgb(109, 109, 109);
+}
+.product-name {
+    margin-left: 15px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(109, 109, 109);
+    overflow: hidden;
+}
+.product-price {
+    margin-top: 4px;
+    margin-left: 15px;
+    font-size: 17px;
+    font-weight: 500;
+}
+.product-btn {
+    margin-top: 4px;
+    padding: 4px 25px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 6px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+    text-align: center;
+}
+.product-put{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid lightgray;
+    border-radius: 8px;
+>>>>>>> eec5dd2 (변경사항)
 }
