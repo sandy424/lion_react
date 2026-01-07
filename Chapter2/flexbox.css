@@ -41,6 +41,7 @@
 }
 .align-end {
     align-items: flex-end;
+}
 =======
 .flex-container {
     display: flex;
@@ -84,5 +85,5 @@
 }
 .align-end {
     align-items: flex-end;
->>>>>>> eec5dd2 (변경사항)
 }
+>>>>>>> eec5dd2 (변경사항)
