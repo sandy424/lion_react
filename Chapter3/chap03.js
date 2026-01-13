@@ -39,3 +39,15 @@ const fruits = ["Apple", "Banana"];
 const fruits2 = [...fruits, "Mango"];
 
 console.log(fruits2);
+
+// 함수의 나머지 매개변수
+function sum(...paras) {
+    let ret = 0;
+
+    paras.forEach((paras) => {
+        ret += paras;
+    });
+    console.log(ret);
+}
+sum(10,20);
+sum(1,2,3,45,6,7);
