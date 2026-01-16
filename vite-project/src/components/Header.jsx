@@ -1,7 +1,8 @@
 function Header(){
     return(
         <div>
-            Header
+            <h3>코코몰</h3>
+            
         </div>
     )
 }

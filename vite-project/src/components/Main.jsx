@@ -1,6 +1,8 @@
+import styles from "../style/Main.module.css";
+
 function Main({children}){
     return(
-        <div>
+        <div className={styles.card}>
             {children}
         </div>
     )
