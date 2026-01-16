@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
@@ -6,7 +7,7 @@ import Product from "./components/Product";
 
 function App() {
   return(
-    <>
+    <BrowserRouter>
       <Header/>
       <Main>
       <Product name="슈핀 앙고라 퍼 슬림핏 라운드 긴팔 티셔츠" price="19,710원" />
@@ -14,7 +15,7 @@ function App() {
       <Product name="언제나 입을 수 있는 니트" price="12,000원" />
       </Main>
       <Footer/>
-    </>
+    </BrowserRouter>
   )
 }
 
