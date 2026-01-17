@@ -1,0 +1,152 @@
+body {
+    background-color: #f0f0f0;
+}
+
+.header {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 38px;
+}
+.container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    border: 1px solid gray;
+    border-radius: 16px;
+    width: 350px;
+    height: 500px;
+}
+.container h3 {
+    font-size: 45px;
+}
+
+.btns button{
+    width: 60px;
+    height: 40px;
+    font-size: 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    background-color: pink;
+    border: none;
+    border-radius: 5px;
+}
+
+.btns {
+    margin: 20px 0;
+}
+
+.stepper {
+    margin: 10px 0;
+}
+.stepper input {
+    width: 80px;
+    text-align: center;
+    margin: 15px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.menu button {
+    padding: 15px;
+    margin: 40px 10px;
+    width: 150px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgb(245, 138, 138);
+    border: none;
+    border-radius: 8px;
+    color: white;
+}
+
+.trackerInfo {
+    font-size: 18px;
+    text-align: center;
+}
+.trackerArea {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 1px solid lightslategray;
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(182, 182, 182);
+}
+.trackerBall {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: tomato;
+    border-radius: 50%;
+}
+.todoInput {
+    display: flex;
+    gap: 12px;
+    height: 28px;
+}
+.todoInput input {
+    width: 200px;
+    padding-left: 8px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+.todoInput button {
+    width: 60px;
+    cursor: pointer;
+    background-color: skyblue;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+.todoItems {
+    padding: 12px;
+    width: 280px;
+    height: 280px;
+}
+.todoItems h4{
+    margin: 10px 0;
+}
+.todoItems ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.todoItems li {
+    padding: 6px 10px;
+    display: flex;
+    align-items: center;
+}
+.todoItems li span {
+    flex: 1;
+}
+.todoItems input {
+    margin-right: 12px;
+    width: 18px;
+    height: 18px;
+}
+.todoItems button {
+    cursor: pointer;
+    background-color: lightgray;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(87, 87, 87);
+    text-align: center;
+}
+
+.todoProgress {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
