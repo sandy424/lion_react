@@ -1,14 +1,24 @@
-function TodoListItems() {
+import TodoList from "./TodoList";
+
+function TodoListItems({todos}) {
     return(
         <div className="todoItems">
             <h4>할 일 목록</h4>
-            <ul>
-                <li>
-                    <input type="checkbox" />
-                    <span>식사 하기</span>
-                    <button>X</button>
-                </li>
-            </ul>
+            {todos.length === 0 ? (<div>할 일 목록이 없습니다.</div>)
+            : (
+                 <ul>
+                    {todos.map((todos, index) => {
+                        return (
+                            <li key={index}>
+                                <input type="checkbox" />
+                                <span>{todos}</span>
+                                <button>X</button>
+                            </li>
+                        )
+                    })}
+                </ul>
+            )}
+           
         </div>
     )
 }
