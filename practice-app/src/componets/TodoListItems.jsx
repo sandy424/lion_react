@@ -1,6 +1,6 @@
 import TodoList from "./TodoList";
 
-function TodoListItems({todos}) {
+function TodoListItems({todos, onToggle, onDelete}) {
     return(
         <div className="todoItems">
             <h4>할 일 목록</h4>
@@ -10,9 +10,15 @@ function TodoListItems({todos}) {
                     {todos.map((todos, index) => {
                         return (
                             <li key={index}>
-                                <input type="checkbox" />
-                                <span>{todos}</span>
-                                <button>X</button>
+                                <input type="checkbox"
+                                checked={todos.isCompleted}
+                                onChange={() => {
+                                    onToggle(todos.id);
+                                }} />
+                                <span>{todos.text}</span>
+                                <button onClick={() => {
+                                    onDelete(todos.id);
+                                }}>X</button>
                             </li>
                         )
                     })}

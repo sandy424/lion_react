@@ -7,7 +7,33 @@ function TodoList() {
     const [value, setValue] = useState("");
 
     const handleCreate = (value) => {
-        setTodos([...todos, value]);
+        setTodos([...todos,
+            {
+                id: Math.random(),
+                text: value,
+                isCompleted: false,
+            }
+        ]);
+    }
+
+    const handleToggle = (id) => {
+        const nextTodos = todos.map((todo) => {
+            if(todo.id !== id) {
+                return todo;
+            }
+            return {
+                ...todo,
+                isCompleted: !todo.isCompleted,
+            }
+        })
+        setTodos(nextTodos);
+    }
+
+    const handleDelete = (id) => {
+        const nextTodos = todos.filter((todo) => {
+            return todo.id !== id;
+        })
+        setTodos(nextTodos);
     }
 
     return(
@@ -26,8 +52,12 @@ function TodoList() {
                     setValue("");
                 }}>추가</button>
             </div>
-            <TodoListItems todos={todos}/>
-            <TodoProgress />
+            <TodoListItems 
+            todos={todos} 
+            onToggle={handleToggle}
+            onDelete={handleDelete}/>
+            <TodoProgress 
+            todos={todos}/>
         </div>
     )
 }
