@@ -1,6 +1,6 @@
 import {useState, useRef, useEffect} from 'react';
 
-const InitialTime = 3;
+const InitialTime = 0;
 
 function Timer() {
     const [time, setTime] = useState(InitialTime);
@@ -26,6 +26,16 @@ function Timer() {
             <h2 className="header">Timer</h2>
             <div className="timer">
                 <h3>{time}</h3>
+                <div className="timerset">
+                    <button onClick={() => {
+                    if(time > 0) 
+                        {setTime(time - 1);}
+                    }}>-</button>
+
+                    <button onClick={() => {
+                        setTime(time + 1);
+                    }}>+</button>
+                </div>
             </div>
             <div className="timerBtns">
                 {stop ?  
