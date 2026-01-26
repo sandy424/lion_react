@@ -1,0 +1,45 @@
+.container {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.header {
+    margin: 30px 0;
+    padding-left: 15px;
+}
+
+.postContainer {
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+}
+.postContainer p {
+    color: rgb(100, 100, 100)
+}
+.userInfo {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.userInfo .avatar {
+    width: 30px;
+    height: 30px;
+    background-color: lightcoral;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.userInfo .username {
+
+}
+.userInfo .email {
+    color: gray;
+    margin-left: auto;
+}

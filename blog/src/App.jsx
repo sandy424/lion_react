@@ -1,29 +1,48 @@
-import { useState } from 'react';
+import Header from "../src/components/Header";
+import Post from "../src/components/Post";
+
+import useFetchPost from "./hooks/userFetchPost";
+
+import "./App.css";
+import useFetchUser from "./hooks/useFetchUser";
 
 function App() {
-  const [like, setLike] = useState(0);
-  const [hidden, setHidden] = useState(false);
+  const {posts, postError, postLoading} = useFetchPost();
+  const {users, userLoading, userError} = useFetchUser();
+  
+
+  if(postLoading || userLoading) {
+    return <div className="container">
+      <Header/>
+      <div>Loading ...</div>
+      </div>
+  }
+
+  if(postError || userError) {
+    return(
+      <div className="container">
+        <Header/>
+        <div>에러가 발생했습니다.</div>
+        <div>새로고침을 해주세요.</div>
+      </div>
+    )
+  }
 
   return (
-    <div>
-      <p>환영합니다. 이 곳은 Todo-Blog입니다.
-        {hidden ? (<button onClick={() => {
-          setHidden(hidden ? true : false)}}>{hidden ? "더보기" : "숨기기"}</button>) : 
-        (
-          <>
-            <br/>
-            할 일 관리와 블로그 기능을 함께 제공합니다.
-            <br/>
-            효율적으로 일정을 관리하고, 생각을 기록해보세요!
-            <br/>
-            시작하려면 사이드바에서 원하는 기능을 선택하세요.
-          </>
-        )}
-      </p>
-      <div>좋아요 : {like}</div>
-      <button onClick={() => {
-        setLike(like+1);
-      }}>Good !</button>
+    <div className="container">
+      <Header/>
+      {posts.map(({id, title, body, userId}) => {
+        const user = users.find((user) => user.id === userId);
+        return(
+          <Post 
+          key={id} 
+          title={title} 
+          body={body}
+          username={user.username}
+          email={user.email}
+          />
+        )
+      })}
     </div>
   )
 }
