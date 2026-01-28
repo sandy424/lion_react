@@ -4,7 +4,7 @@ import {useState, useEffect} from 'react';
 function useFetchProduct() {
 
     const [products, setProducts] = useState([]);
-    const [productLoading, setProductLoading] = useState(false);
+    const [productLoading, setProductLoading] = useState(true);
     const [productError, setProductError] = useState(false);
 
     useEffect(() => {

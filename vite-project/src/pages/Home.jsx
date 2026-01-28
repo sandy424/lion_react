@@ -36,7 +36,7 @@ function Home() {
                 })}
             </ul>
 
-            <h3>상품 목록 (20)</h3>
+            <h3>상품 목록 ({filteredProduct.length})</h3>
 
             <div className={styles.productList}>
                 {filteredProduct.map(({id, category, image, name, price}) => {

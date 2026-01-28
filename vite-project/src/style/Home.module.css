@@ -19,6 +19,9 @@
     border-radius: 8px;
     overflow: hidden;
     margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
 }
 .productListItem img{
     width: 220px;
@@ -44,6 +47,4 @@
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
-    justify-content: center;
-    justify-content: space-around;
 }
