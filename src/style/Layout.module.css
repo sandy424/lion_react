@@ -1,0 +1,22 @@
+.container {
+    width: 700px;
+    margin: 0 auto;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    color: rgb(83, 83, 83);
+    font-size: 28px;
+    font-weight: 850;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: inherit;
+    margin-right: 20px;
+}
